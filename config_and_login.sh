@@ -9,8 +9,7 @@ if [[ -z "$AWS_SECRET_ACCESS_KEY" ]]; then
   exit 1
 fi
 if [[ -z "$AWS_REGION" ]]; then
-  echo "Must provide AWS_REGION in environment" 1>&2
-  exit 1
+  export AWS_REGION='us-east-1'
 fi
 
 export PIP=$(which pip pip3 | head -1)
